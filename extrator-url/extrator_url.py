@@ -7,6 +7,10 @@ class ExtratorURL:
         return url.strip()
 
     def valida_url(self):
+        if not self.url:
+            raise ValueError('A URL está vazia')
+
+    def valida_url(self):
         if self.url=='':
             raise ValueError('A URL está vazia')
 

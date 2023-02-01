@@ -4,7 +4,7 @@ import re #Regular Expression -- RegEx
 
 #Padrão da extrutura do CEP brasileiro
 
-padrao=re.compile('[0123456789][0123456789][0123456789][0123456789][0123456789][-," "]?[0123456789][0123456789][0123456789]')
+padrao=re.compile('[0-9]{5}[-," "]{0,1}[0-9]{3}')
 busca=padrao.search(endereco) #Mach
 if busca:
     cep=busca.group()
